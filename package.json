@@ -1,0 +1,27 @@
+{
+  "name": "curso-otimizando-com-gulp",
+  "version": "1.0.0",
+  "description": "Projeto desenvolvido no curso Otimizando com Gulp",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rafaelfilholm/curso-otimizando-com-gulp-js.git"
+  },
+  "keywords": [
+    "gulp",
+    "frontend",
+    "node"
+  ],
+  "author": "Rafael Laurindo",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/rafaelfilholm/curso-otimizando-com-gulp-js/issues"
+  },
+  "homepage": "https://github.com/rafaelfilholm/curso-otimizando-com-gulp-js#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1"
+  }
+}
