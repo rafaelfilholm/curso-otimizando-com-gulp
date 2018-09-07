@@ -23,7 +23,7 @@
   "homepage": "https://github.com/rafaelfilholm/curso-otimizando-com-gulp-js#readme",
   "devDependencies": {
     "bootstrap": "^3.3.7",
-    "gulp": "^3.9.1",
+    "gulp": "^4.0.0",
     "gulp-concat": "^2.6.1",
     "gulp-customize-bootstrap": "0.0.6",
     "gulp-less": "^4.0.1",
