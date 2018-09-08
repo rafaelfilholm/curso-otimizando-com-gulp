@@ -1,5 +1,7 @@
 let gulp = require('gulp');
-let gulpConcat = require('gulp-concat');
+let concat = require('gulp-concat');
+let jsmin = require('gulp-jsmin');
+let rename = require('gulp-rename');
 let customizeBootstrap = require('gulp-customize-bootstrap');
 let less = require('gulp-less');
  
@@ -14,13 +16,15 @@ gulp.task('compileBootstrap', () => {
 
 gulp.task('lib', () => {
 	gulp.src(['./node_modules/jquery/dist/jquery.min.js', './node_modules/angular/angular.min.js'])
-		.pipe(gulpConcat('lib.js'))
+		.pipe(concat('lib.js'))
 		.pipe(gulp.dest('./public/dist/js/'));
 });
 
 
 gulp.task('js', () => {
 	gulp.src(['./src/app/app.js', './src/app/controllers.js'])
-		.pipe(gulpConcat('js.js'))
+		.pipe(concat('app.js'))
+		.pipe(jsmin())
+        .pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('./public/dist/js/'));
 });
