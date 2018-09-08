@@ -1,12 +1,13 @@
-let gulp = require('gulp');
 let concat = require('gulp-concat');
+let customizeBootstrap = require('gulp-customize-bootstrap');
+let gulp = require('gulp');
+let imagemin = require('gulp-imagemin');
+let less = require('gulp-less');
 let jsmin = require('gulp-jsmin');
 let rename = require('gulp-rename');
-let customizeBootstrap = require('gulp-customize-bootstrap');
-let less = require('gulp-less');
 let uglifycss = require('gulp-uglifycss');
- 
-gulp.task('default', ['compileBootstrap', 'lib', 'js']);
+
+gulp.task('default', ['compileBootstrap', 'lib', 'js', 'image']);
 
 gulp.task('compileBootstrap', () => {
   gulp.src('./node_modules/bootstrap/less/bootstrap.less')
@@ -31,3 +32,9 @@ gulp.task('js', () => {
         .pipe(rename({suffix: '.min'}))
 		.pipe(gulp.dest('./public/dist/js/'));
 });
+
+gulp.task('image', () =>
+    gulp.src('./src/images/*')
+        .pipe(imagemin())
+        .pipe(gulp.dest('./public/dist/img/'))
+);
