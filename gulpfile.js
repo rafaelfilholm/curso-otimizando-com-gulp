@@ -14,6 +14,6 @@ gulp.task('compileBootstrap', () => {
 
 gulp.task('lib', () => {
 	gulp.src(['./node_modules/jquery/dist/jquery.min.js'])
-		.pipe(gulpConcat('bundle.js'))
+		.pipe(gulpConcat('lib.js'))
 		.pipe(gulp.dest('./public/dist/js/'));
 });
